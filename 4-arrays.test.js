@@ -3,15 +3,15 @@
 describe('Arrays', function() {
   it('should create arrays', function() {
     var emptyArray = [];
-    expect(emptyArray.length).toBe(RESPOSTA);
+    expect(emptyArray.length).toBe(0);
 
     var multiTypeArray = [0, 1, "two", function () { return 3; }, {value1: 4, value2: 5}, [6, 7]];
-    expect(multiTypeArray[0]).toBe(RESPOSTA);
-    expect(multiTypeArray[2]).toBe(RESPOSTA);
-    expect(multiTypeArray[3]()).toBe(RESPOSTA);
-    expect(multiTypeArray[4].value1).toBe(RESPOSTA);
-    expect(multiTypeArray[4]["value2"]).toBe(RESPOSTA);
-    expect(multiTypeArray[5][0]).toBe(RESPOSTA);
+    expect(multiTypeArray[0]).toBe(0);
+    expect(multiTypeArray[2]).toBe("two");
+    expect(multiTypeArray[3]()).toBe(function () { return 3; }());
+    expect(multiTypeArray[4].value1).toBe({value1: 4, value2: 5}.value1);
+    expect(multiTypeArray[4]["value2"]).toBe({value1: 4, value2: 5}["value2"]);
+    expect(multiTypeArray[5][0]).toBe([6, 7][0]);
   });
 
   it('should understand array literals', function () {
@@ -22,10 +22,10 @@ describe('Arrays', function() {
     expect(array).toEqual([1]);
 
     array[1] = 2;
-    expect(array).toEqual([1, RESPOSTA]);
+    expect(array).toEqual([1, 2]);
 
     array.push(3);
-    expect(array).toEqual(RESPOSTA);
+    expect(array).toEqual([1, 2, 3]);
   });
 
   it('should understand array length', function () {
