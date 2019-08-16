@@ -9,12 +9,12 @@ describe('Objects', function () {
     });
 
     it('should confirm objects are collections of properties', function () {
-      expect(descricao.nome).toBe(RESPOSTA);
+      expect(descricao.nome).toBe('Joker');
     });
 
     it('should confirm that properties are case sensitive', function () {
-      expect(descricao.sobrenome).toBe(RESPOSTA);
-      expect(descricao.sobrenome).toBe(RESPOSTA);
+      expect(descricao.sobrenome).toBe('Harley');
+      expect(descricao.sobrenome).toBe('Harley');
     });
   });
 
