@@ -2,11 +2,11 @@
 
 describe('Função que recebe a temperatura em graus Farenheit e retorna em graus Celsius.', function() {
   function farenheitToCelsius(farenheit) {
-    return RESPOSTA; // IMPLEMENTE
+    return 5 * (farenheit-32) / 9; // IMPLEMENTE
   }
 
   it('32 fahrenheit é 0 celsius', function() {
-    expect(femininoOuMasculino(letra)).toBe(0);
+    expect(femininoOuMasculino(letra)).toBe(0); //??????????????????????/
   });
 
   it('104 fahrenheit é 40 celsius', function() {
